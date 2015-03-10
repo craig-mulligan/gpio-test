@@ -8,4 +8,4 @@ RUN pip install RPi.Gpio
 
 ADD gpio_example.py /App/
 
-CMD "udevd & && python /App/gpio_example.py"
+CMD udevd & && python /App/gpio_example.py
