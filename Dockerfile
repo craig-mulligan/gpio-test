@@ -2,10 +2,10 @@ FROM resin/rpi-raspbian:wheezy
 
 RUN apt-get update
 
-RUN apt-get install -y python wget build-essential python-dev python-pip mplayer
+RUN apt-get install -y python wget build-essential python-dev python-pip
 
-RUN pip install pyttsx pycurl
+RUN pip install RPi.Gpio
 
 ADD gpio_example.py /App/
 
-CMD udevd & python /App/gpio_example.py
+CMD cd /sys/class/gpio && find
