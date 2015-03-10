@@ -1,18 +1,23 @@
 #!/usr/bin/python
-import RPi.GPIO as GPIO
-import time
+# import RPi.GPIO as GPIO
+# import time
 
-a = GPIO.VERSION
-print a
+# a = GPIO.VERSION
+# print a
 
-GPIO.setmode(GPIO.BCM)
+# GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+# GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-print "gpioexample"
+# print "gpioexample"
 
-while True:
-    input_state = GPIO.input(17)
-    if input_state == False:
-        print('Button Pressed')
-        time.sleep(0.2)
+# while True:
+#     input_state = GPIO.input(17)
+#     if input_state == False:
+#         print('Button Pressed')
+#         time.sleep(0.2)
+import pyttsx
+engine = pyttsx.init()
+engine.say('Greetings!')
+engine.say('How are you today?')
+engine.runAndWait()
