@@ -8,4 +8,4 @@ RUN pip install RPi.Gpio
 
 ADD gpio_example.py /App/
 
-CMD cd /sys/class/gpio && find
+CMD cd /sys/class/gpio && echo 4 > export
